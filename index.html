@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>E-Mail-Simulation</title>
+</head>
+<body>
+  <h1>E-Mail an die Leitung Personalentwicklung</h1>
+  <form id="emailForm">
+    <label>Betreff: <input type="text" name="subject" required></label><br>
+    <label>An: <input type="email" name="to" value="leitung@personalentwicklung.de" readonly></label><br>
+    <label>Nachricht:<br><textarea name="body" required></textarea></label><br>
+    <button type="button" onclick="sendEmail()">Senden</button>
+  </form>
+  <script>
+    function sendEmail() {
+      alert('E-Mail wurde gesendet (Simulation)');
+      // Optional: Leite zurück zu Unipark
+      // window.location.href = 'https://dein-unipark-link.de';
+    }
+  </script>
+</body>
+</html>
