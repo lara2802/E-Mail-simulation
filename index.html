@@ -83,11 +83,16 @@
   </div>
   <script>
     function sendEmail() {
-      alert('E-Mail wurde gesendet (Simulation)');
-      // Optional: Weiterleitung nach dem Absenden einbauen
-      // window.location.href = 'https://dein-unipark-link.de';
-    }
-  </script>
-</body>
-</html>
+  // Blende das Formular aus
+  document.getElementById('emailForm').style.display = 'none';
+  
+  // Zeige eine Erfolgsmeldung an
+  const successMsg = document.createElement('div');
+  successMsg.style.marginTop = '40px';
+  successMsg.style.textAlign = 'center';
+  successMsg.style.fontSize = '1.2rem';
+  successMsg.style.color = '#38476b';
+  successMsg.innerHTML = '<strong>E-Mail wurde erfolgreich gesendet.</strong><br>Sie können dieses Fenster nun schließen.';
+  document.querySelector('.container').appendChild(successMsg);
+}
 
