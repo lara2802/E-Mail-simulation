@@ -2,20 +2,89 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>E-Mail-Simulation</title>
+  <title>E-Mail an die Leitung Personalentwicklung</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f7fb;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 450px;
+      margin: 60px auto;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      border-radius: 12px;
+      padding: 32px 32px 24px 32px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+      text-align: center;
+      color: #38476b;
+    }
+    label {
+      display: block;
+      margin-top: 18px;
+      font-weight: 500;
+      color: #3e3e3e;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 5px;
+      border: 1px solid #d0d4ea;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #f8fafd;
+      transition: border 0.2s;
+    }
+    input:focus, textarea:focus {
+      border-color: #6c7cff;
+      outline: none;
+    }
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+    .button {
+      margin-top: 24px;
+      width: 100%;
+      background: #6c7cff;
+      color: #fff;
+      border: none;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      padding: 12px 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .button:hover {
+      background: #38476b;
+    }
+  </style>
 </head>
 <body>
-  <h1>E-Mail an die Leitung Personalentwicklung</h1>
-  <form id="emailForm">
-    <label>Betreff: <input type="text" name="subject" required></label><br>
-    <label>An: <input type="email" name="to" value="leitung@personalentwicklung.de" readonly></label><br>
-    <label>Nachricht:<br><textarea name="body" required></textarea></label><br>
-    <button type="button" onclick="sendEmail()">Senden</button>
-  </form>
+  <div class="container">
+    <h1>E-Mail an die Leitung Personalentwicklung</h1>
+    <form id="emailForm" autocomplete="off">
+      <label for="subject">Betreff:</label>
+      <input type="text" id="subject" name="subject" required>
+
+      <label for="to">An:</label>
+      <input type="email" id="to" name="to" value="leitung@personalentwicklung.de" readonly>
+
+      <label for="body">Nachricht:</label>
+      <textarea id="body" name="body" required></textarea>
+
+      <button class="button" type="button" onclick="sendEmail()">Senden</button>
+    </form>
+  </div>
   <script>
     function sendEmail() {
       alert('E-Mail wurde gesendet (Simulation)');
-      // Optional: Leite zurück zu Unipark
+      // Optional: Weiterleitung nach dem Absenden einbauen
       // window.location.href = 'https://dein-unipark-link.de';
     }
   </script>
