@@ -71,16 +71,20 @@
     <div class="container">
   <h1>E-Mail an die Leitung der Personalentwicklung</h1>
   <form action="https://formsubmit.co/32hela1mwp@hft-stuttgart.de" method="POST">
-    <label for="subject">Betreff:</label>
-    <input type="text" id="subject" name="subject" required>
+  <!-- FormSubmit-Konfiguration -->
+  <input type="hidden" name="_subject" value="Experiment: E-Mail an die Personalentwicklung">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
 
-    <!-- Das Eingabefeld "An:" wird entfernt, da die Zieladresse festgelegt ist -->
+  <label for="subject">Betreff:</label>
+  <input type="text" id="subject" name="Betreff" required>
 
-    <label for="message">Nachricht:</label>
-    <textarea id="message" name="message" required></textarea>
+  <label for="message">Nachricht:</label>
+  <textarea id="message" name="Nachricht" required></textarea>
 
-    <button class="button" type="submit">Senden</button>
-  </form>
+  <button class="button" type="submit">Senden</button>
+</form>
+
 </div>
     
   </div>
@@ -98,6 +102,7 @@
   </script>
 </body>
 </html>
+
 
 
 
