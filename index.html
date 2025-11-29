@@ -65,6 +65,22 @@
     }
   </style>
 </head>
+  <script>
+  // URL-Parameter pid auslesen
+  const params = new URLSearchParams(window.location.search);
+  const pid = params.get('pid');
+
+  // globale Variable für deine weitere Logik
+  window.participant_id = pid;
+
+  // optional: Hidden Field befüllen, falls vorhanden
+  const hiddenInput = document.getElementById('participant_id');
+  if (hiddenInput && pid) {
+    hiddenInput.value = pid;
+  }
+</script>
+</body>
+</html>
 <body>
   <div class="container">
     <h1>E-Mail an die Leitung der Personalentwicklung</h1>
@@ -86,8 +102,23 @@
       <button class="button" type="submit">Senden</button>
     </form>
   </div>
+  <script>
+  // URL-Parameter pid auslesen
+  const params = new URLSearchParams(window.location.search);
+  const pid = params.get('pid');
+
+  // globale Variable für deine weitere Logik
+  window.participant_id = pid;
+
+  // optional: Hidden Field befüllen, falls vorhanden
+  const hiddenInput = document.getElementById('participant_id');
+  if (hiddenInput && pid) {
+    hiddenInput.value = pid;
+  }
+</script>
 </body>
 </html>
+
 
 
 
