@@ -70,12 +70,10 @@
     <h1>E-Mail an die Leitung der Personalentwicklung</h1>
 
     <!-- WICHTIG: method="POST" muss exakt so dastehen -->
-    <form action="https://formsubmit.co/laraherr2@gmail.com" method="POST">
-      <!-- FormSubmit-Konfiguration -->
-      <input type="hidden" name="_subject" value="Experiment: E-Mail an die Personalentwicklung">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://lara2802.github.io/E-Mail-simulation/danke.html">
+    <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="52ee2da0-95d7-49c5-926a-9d7ee854a4ce">
+  <input type="hidden" name="subject" value="Experiment: E-Mail an die Personalentwicklung">
+  <input type="hidden" name="redirect" value="https://lara2802.github.io/E-Mail-simulation/danke.html">
       
       <!-- Hidden field for respondent_id (will be populated by JavaScript) -->
       <input type="hidden" id="respondent_id" name="Respondent_ID" value="">
@@ -108,4 +106,5 @@
     });
   </script>
 </body>
+
 </html>
